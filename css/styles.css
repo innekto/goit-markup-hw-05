@@ -124,9 +124,40 @@ ul {
   margin-left: auto;
   gap: 50px;
 }
-
 .current {
   color: var(--active-text-color);
+}
+.nav-studio,
+.nav-port {
+  position: relative;
+}
+
+.nav-studio::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  content: "";
+
+  background-color: var(--active-text-color);
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.nav-port::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  content: "";
+
+  background-color: var(--active-text-color);
+  width: 78px;
+  height: 4px;
+  border-radius: 2px;
 }
 .contact-me {
   display: block;
@@ -281,6 +312,28 @@ ul {
 .what-to-do-list {
   display: flex;
   gap: 30px;
+}
+
+.what-to-do-wrap {
+  position: relative;
+}
+
+.wrap-dis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .team {
@@ -550,6 +603,10 @@ ul {
   border: 0px solid transparent;
   border-radius: 4px;
   padding: 6px 22px;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .port-button:hover,
 .port-button:focus {
@@ -573,6 +630,10 @@ ul {
 .filter-link {
   text-decoration: none;
   display: block;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-link:hover,
 .filter-link:focus {
