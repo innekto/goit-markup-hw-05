@@ -26,7 +26,9 @@
           >
           <ul class="main-nav">
             <li class="head-item">
-              <a href="./index.html" class="main-nav-item current nav-studio">Студія</a>
+              <a href="./index.html" class="main-nav-item current nav-studio"
+                >Студія</a
+              >
             </li>
             <li class="head-item">
               <a href="./portfolio.html" class="main-nav-item">Портфоліо</a>
@@ -63,7 +65,9 @@
       <div class="hero">
         <div class="container">
           <h1 class="headline">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="service">Замовити послугу</button>
+          <button type="button" class="service" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </div>
 
@@ -481,5 +485,17 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="close-button" width="18px" height="18px">
+            <use href="./images/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./modal.js"></script>
   </body>
 </html>
